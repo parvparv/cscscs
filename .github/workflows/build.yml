@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v4  # 更新 checkout 版本
 
     - name: build_windows
       run: |
@@ -33,15 +33,13 @@ jobs:
       shell: pwsh
 
     - name: upload file1
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4  # 更新 upload-artifact 版本
       with:
         name: a2silk-cli_windows_i686.exe
-        path: 
-            Release/a2silk-cli_windows_i686.exe
+        path: Release/a2silk-cli_windows_i686.exe
 
     - name: upload file2
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4  # 更新 upload-artifact 版本
       with:
         name: a2silk-cli_windows_x86_64.exe
-        path: 
-            Release/a2silk-cli_windows_x86_64.exe
+        path: Release/a2silk-cli_windows_x86_64.exe
